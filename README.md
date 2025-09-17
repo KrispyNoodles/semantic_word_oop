@@ -1,6 +1,6 @@
 # 🧠 semantic_word_oop
 
-A fun and educational project that explores **word semantics** through **object-oriented programming** and **pretrained word embeddings**.
+A fun side project that explores **word semantics** through **object-oriented programming** and **pretrained word embeddings**.
 
 This Python class lets you perform vector arithmetic on words—such as:
 
@@ -8,18 +8,14 @@ This Python class lets you perform vector arithmetic on words—such as:
 king - man + woman = queen
 ```
 
-📦 Built with Gensim's pretrained models, the project demonstrates how analogies and relationships between words can be represented mathematically using vector operations.
-
----
-
 ## 🔍 What It Does
 
 - Loads a pretrained word embedding model (e.g., GloVe, Word2Vec).
-- Wraps each word in an object for intuitive manipulation using Python operators:
-  - `+` for vector addition
-  - `-` for vector subtraction
-- Prevents reuse of words by using stem-based exclusion.
-- Supports custom embedding models with a simple method call.
+- Creates an instance of each word with attributes such as the original text and its corresponding vector.
+- Supports intuitive vector arithmetic using operator overloading:
+  - + for vector addition  
+  - - for vector subtraction
+- Prevents repeated use of words in analogy chains by applying stem-based exclusion, managed through a class-level variable `EXCLUDED_STEMS`.
 
 ---
 
@@ -41,5 +37,8 @@ man = WordVector("man")
 woman = WordVector("woman")
 
 result = king - man + woman
-print(result)  # Should return something close to "queen"
+result
+
+# to ensure that the result isnt removed (making it repeatable)
+WordVector.EXCLUDED_STEMS = []
 ```
