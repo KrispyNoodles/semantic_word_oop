@@ -1,14 +1,9 @@
 # semantic_word_oop
 A fun project that explores word semantics using object-oriented programming
 
-This project provides a lightweight Python class for performing algebraic operations on word vectors—such as king - man + woman = queen—using pretrained embeddings like GloVe or Word2Vec.
+This project provides a lightweight Python class for performing algebraic operations on word vectors—such as king - man + woman = queen.
 
-Features include:
+Below is a pictorial representation of it
 
-Easy-to-use WordVector class with + and - operator overloading
-
-Stem-aware exclusion to prevent returning original or semantically similar input terms
-
-Swappable pretrained models from gensim.downloader
-
-Suitable for building semantic analogy tools, NLP experimentation, or educational demos.
+<img width="961" height="814" alt="image" src="https://github.com/user-attachments/assets/a569c3bc-82d1-4bf2-ab75-9acffe826249" />
+<img width="586" height="460" alt="image" src="https://github.com/user-attachments/assets/32d6157c-d91f-438b-b6b0-e894efdd8fd1" />
